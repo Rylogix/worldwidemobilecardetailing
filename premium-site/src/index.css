@@ -1,15 +1,15 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --bg: #07090d;
-  --bg-soft: #0f131a;
-  --panel: #141a23;
-  --panel-2: #1b2330;
-  --text: #f4f7ff;
-  --muted: #afbacd;
-  --gold: #d9b26d;
-  --line: #2a3242;
-  --danger: #ff8f8f;
+  --bg: #060606;
+  --bg-soft: #0f0f0f;
+  --panel: #171717;
+  --panel-2: #202020;
+  --text: #f8f8f8;
+  --muted: #c4c4c4;
+  --accent: #e10600;
+  --line: #363636;
+  --danger: #ff6d6d;
   --success: #8fe8ba;
 }
 
@@ -17,8 +17,8 @@
 html, body, #root { margin: 0; min-height: 100%; }
 body {
   background:
-    radial-gradient(circle at top right, rgba(217, 178, 109, 0.16), transparent 30%),
-    radial-gradient(circle at bottom left, rgba(52, 95, 176, 0.22), transparent 35%),
+    radial-gradient(circle at top right, rgba(225, 6, 0, 0.22), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 35%),
     var(--bg);
   color: var(--text);
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -30,7 +30,7 @@ main { padding-top: 94px; }
 .container { width: min(1140px, 92vw); margin: 0 auto; }
 .section { padding: 4.6rem 0; }
 .section.alt { background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.04)); }
-.eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; font-size: 0.8rem; }
+.eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; font-size: 0.8rem; }
 h1, h2, h3, h4 { font-family: 'Sora', sans-serif; line-height: 1.15; margin: 0 0 0.8rem; }
 h1 { font-size: clamp(2rem, 4.5vw, 3.5rem); }
 h2 { font-size: clamp(1.5rem, 3vw, 2.35rem); }
@@ -47,7 +47,7 @@ p { color: var(--muted); line-height: 1.65; margin: 0 0 1rem; }
   transition: all 220ms ease;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn-primary { background: linear-gradient(135deg, #e7c68a, #c29249); color: #1c1409; }
+.btn-primary { background: linear-gradient(135deg, #ff3b36, #b40300); color: #fff; }
 .btn-secondary { background: transparent; border-color: var(--line); color: var(--text); }
 
 .site-header {
@@ -84,8 +84,8 @@ p { color: var(--muted); line-height: 1.65; margin: 0 0 1rem; }
 .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .testimonial-grid, .blog-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .card, .pricing-card, .blog-card { padding: 1.2rem; }
-.card a, .section-head a { color: var(--gold); font-weight: 600; }
-.price { color: var(--gold); font-weight: 700; margin-bottom: 0.4rem; }
+.card a, .section-head a { color: var(--accent); font-weight: 600; }
+.price { color: var(--accent); font-weight: 700; margin-bottom: 0.4rem; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; }
 .pill-list { display: flex; flex-wrap: wrap; gap: 0.6rem; }
@@ -119,7 +119,7 @@ p { color: var(--muted); line-height: 1.65; margin: 0 0 1rem; }
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: 1.3rem;
-  background: linear-gradient(135deg, rgba(217, 178, 109, 0.1), rgba(42, 69, 122, 0.28));
+  background: linear-gradient(135deg, rgba(225, 6, 0, 0.18), rgba(255, 255, 255, 0.08));
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
 
@@ -159,10 +159,10 @@ small { color: var(--danger); }
   height: 180px;
   border-radius: 12px;
   border: 1px solid var(--line);
-  background: linear-gradient(135deg, rgba(217,178,109,0.3), rgba(47, 83, 161, 0.4));
+  background: linear-gradient(135deg, rgba(225, 6, 0, 0.35), rgba(255, 255, 255, 0.12));
   margin-bottom: 0.7rem;
 }
-.blog-meta { font-size: 0.83rem; color: var(--gold); margin-bottom: 0.4rem; }
+.blog-meta { font-size: 0.83rem; color: var(--accent); margin-bottom: 0.4rem; }
 
 .site-footer { border-top: 1px solid var(--line); padding: 3rem 0 5.2rem; background: var(--bg-soft); }
 .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 1rem; }
@@ -172,7 +172,7 @@ small { color: var(--danger); }
 .mobile-sticky-cta {
   display: none;
   position: fixed; left: 1rem; right: 1rem; bottom: 0.95rem; z-index: 90;
-  background: linear-gradient(135deg, #e7c68a, #c29249); color: #1c1409;
+  background: linear-gradient(135deg, #ff3b36, #b40300); color: #fff;
   border-radius: 999px; padding: 0.75rem 1rem; text-align: center; font-weight: 700;
 }
 
