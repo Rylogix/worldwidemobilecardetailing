@@ -1,16 +1,43 @@
-# React + Vite
+# Worldwide Mobile Car Detailing Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This app is configured to deploy to GitHub Pages from the repository root workflow at `.github/workflows/deploy.yml`.
 
-Currently, two official plugins are available:
+## Local Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Build
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Standard build:
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+GitHub Pages build (includes SPA fallback):
+
+```bash
+npm run build:pages
+```
+
+`build:pages` creates `dist/404.html` from `dist/index.html` so deep links (for example `/about`) still load on GitHub Pages.
+
+## GitHub Pages Deployment
+
+1. Push to the `main` branch.
+2. In GitHub, go to `Settings` -> `Pages`.
+3. Set `Source` to `GitHub Actions`.
+4. The `Deploy to GitHub Pages` workflow will build from `premium-site` and publish `premium-site/dist`.
+
+## Base Path
+
+Vite is configured with:
+
+```js
+base: '/worldwidemobilecardetailing/'
+```
+
+If the repository name changes, update `premium-site/vite.config.js` to match the new repository path.
